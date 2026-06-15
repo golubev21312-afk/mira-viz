@@ -6,6 +6,13 @@
   }
 
   function drawViz(data) {
+    try { _draw(data); } catch(e) {
+      document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;white-space:pre-wrap">' +
+        'ERR: ' + e.message + '\n\nDATA:\n' + JSON.stringify(data, null, 2).slice(0, 3000) + '</pre>';
+    }
+  }
+
+  function _draw(data) {
     var rows = data.tables.DEFAULT || data.tables.concepts || [];
 
     if (!rows || rows.length === 0) {
@@ -114,5 +121,6 @@
   }
 
   dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
+
 
 })();
