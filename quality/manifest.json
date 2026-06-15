@@ -1,12 +1,20 @@
 {
   "name": "Mira Profile Quality",
   "organization": "Mira",
+  "description": "Profile Quality visualization",
+  "logoUrl": "https://golubev21312-afk.github.io/mira-viz/logo.png",
+  "packageUrl": "https://golubev21312-afk.github.io/mira-viz/quality/",
+  "supportUrl": "https://github.com/golubev21312-afk/mira-viz",
+  "devMode": true,
   "components": [
     {
       "id": "miraQuality",
       "name": "Mira Profile Quality",
-      "scriptUrl": "https://golubev21312-afk.github.io/mira-viz/quality/index.js",
-      "configUrl": "https://golubev21312-afk.github.io/mira-viz/quality/config.json"
+      "description": "Profile Quality visualization",
+      "resource": {
+        "js": "https://golubev21312-afk.github.io/mira-viz/quality/index.js",
+        "config": "https://golubev21312-afk.github.io/mira-viz/quality/config.json"
+      }
     }
   ]
 }
