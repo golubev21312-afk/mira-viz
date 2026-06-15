@@ -120,7 +120,10 @@
     document.body.innerHTML = css + body;
   }
 
-  dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
-
+  try {
+    dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
+  } catch(e) {
+    document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;white-space:pre-wrap">INIT ERR: ' + e.message + '</pre>';
+  }
 
 })();
