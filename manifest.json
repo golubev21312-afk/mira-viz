@@ -9,6 +9,7 @@
       "id": "miraFunnel",
       "name": "Mira Funnel",
       "description": "Funnel Drop-off visualization",
+      "useNewClient": true,
       "resource": {
         "js": "gs://looker_mira_bucket/index.js",
         "config": "gs://looker_mira_bucket/config.json"
@@ -18,6 +19,7 @@
       "id": "miraQuality",
       "name": "Mira Profile Quality",
       "description": "Profile Quality visualization",
+      "useNewClient": true,
       "resource": {
         "js": "gs://looker_mira_bucket/quality/index.js",
         "config": "gs://looker_mira_bucket/quality/config.json"
