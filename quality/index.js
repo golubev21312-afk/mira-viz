@@ -24,6 +24,11 @@
   function drawViz(data) {
     var rows = data.tables.DEFAULT;
 
+    if (!rows || rows.length === 0) {
+      document.body.innerHTML = '<div style="padding:20px;font-family:\'Courier New\',monospace;color:#888;font-size:12px;">Connect a data source</div>';
+      return;
+    }
+
     rows.sort(function (a, b) {
       var sd = Number(a.section_order[0]) - Number(b.section_order[0]);
       return sd !== 0 ? sd : Number(a.step_order[0]) - Number(b.step_order[0]);
