@@ -2,8 +2,6 @@
   "name": "Mira Funnel",
   "organization": "Mira",
   "description": "Custom funnel visualization",
-  "logoUrl": "https://golubev21312-afk.github.io/mira-viz/logo.png",
-  "packageUrl": "https://golubev21312-afk.github.io/mira-viz/index.js",
   "supportUrl": "https://github.com/golubev21312-afk/mira-viz",
   "devMode": true,
   "components": [
@@ -12,9 +10,8 @@
       "name": "Mira Funnel",
       "description": "Funnel visualization",
       "resource": {
-        "js": "https://golubev21312-afk.github.io/mira-viz/index.js",
-        "config": "https://golubev21312-afk.github.io/mira-viz/config.json",
-        "css": "https://golubev21312-afk.github.io/mira-viz/index.css"
+        "js": "gs://looker_mira_bucket/index.js",
+        "config": "gs://looker_mira_bucket/config.json"
       }
     }
   ]
