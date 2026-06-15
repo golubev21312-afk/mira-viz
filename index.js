@@ -132,7 +132,7 @@
     init();
   } else {
     var s = document.createElement('script');
-    s.src = 'https://unpkg.com/@google/dscc/dist/dscc.min.js';
+    s.src = 'https://ssl.gstatic.com/datastudio/dscc.min.js';
     s.onload = init;
     s.onerror = function() {
       document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;">dscc library failed to load</pre>';
