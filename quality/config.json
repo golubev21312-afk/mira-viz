@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Profile Quality Data",
+      "elements": [
+        { "id": "section_order", "label": "Section Order",   "type": "DIMENSION", "options": { "min": 1, "max": 1 } },
+        { "id": "section",       "label": "Section",         "type": "DIMENSION", "options": { "min": 1, "max": 1 } },
+        { "id": "step_order",    "label": "Step Order",      "type": "DIMENSION", "options": { "min": 1, "max": 1 } },
+        { "id": "step_label",    "label": "Field Name",      "type": "DIMENSION", "options": { "min": 1, "max": 1 } },
+        { "id": "fill_pct",      "label": "Fill Rate %",     "type": "METRIC",    "options": { "min": 1, "max": 1 } },
+        { "id": "filled",        "label": "Filled (count)",  "type": "METRIC",    "options": { "min": 1, "max": 1 } },
+        { "id": "skipped",       "label": "Skipped (count)", "type": "METRIC",    "options": { "min": 1, "max": 1 } }
+      ]
+    }
+  ],
+  "style": [],
+  "interactions": [],
+  "capabilities": {}
+}

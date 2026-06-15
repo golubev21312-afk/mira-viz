@@ -1,60 +1,12 @@
 {
-  "name": "Profile Quality",
-  "organization": "MIRA",
-  "description": "Profile field fill rate visualization for completed onboarding users",
-  "packageUrl": "https://golubev21312-afk.github.io/mira-viz/quality/",
-  "devMode": true,
-  "data": [
+  "name": "Mira Profile Quality",
+  "organization": "Mira",
+  "components": [
     {
-      "id": "concepts",
-      "label": "Profile Quality Data",
-      "elements": [
-        {
-          "id": "section_order",
-          "label": "Section Order",
-          "type": "DIMENSION",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "section",
-          "label": "Section",
-          "type": "DIMENSION",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "step_order",
-          "label": "Step Order",
-          "type": "DIMENSION",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "step_label",
-          "label": "Field Name",
-          "type": "DIMENSION",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "fill_pct",
-          "label": "Fill Rate %",
-          "type": "METRIC",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "filled",
-          "label": "Filled (count)",
-          "type": "METRIC",
-          "options": { "min": 1, "max": 1 }
-        },
-        {
-          "id": "skipped",
-          "label": "Skipped (count)",
-          "type": "METRIC",
-          "options": { "min": 1, "max": 1 }
-        }
-      ]
+      "id": "miraQuality",
+      "name": "Mira Profile Quality",
+      "scriptUrl": "https://golubev21312-afk.github.io/mira-viz/quality/index.js",
+      "configUrl": "https://golubev21312-afk.github.io/mira-viz/quality/config.json"
     }
-  ],
-  "style": [],
-  "interactions": [],
-  "capabilities": {}
+  ]
 }
