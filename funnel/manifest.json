@@ -3,7 +3,7 @@
   "organization": "MIRA",
   "description": "Onboarding funnel drop-off visualization with step-level filled/skipped/abandoned breakdown",
   "packageUrl": "https://golubev21312-afk.github.io/mira-viz/funnel/",
-  "devMode": false,
+  "devMode": true,
   "data": [
     {
       "id": "concepts",

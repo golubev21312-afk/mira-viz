@@ -3,7 +3,7 @@
   "organization": "MIRA",
   "description": "Profile field fill rate visualization for completed onboarding users",
   "packageUrl": "https://golubev21312-afk.github.io/mira-viz/quality/",
-  "devMode": false,
+  "devMode": true,
   "data": [
     {
       "id": "concepts",
