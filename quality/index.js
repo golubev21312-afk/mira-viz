@@ -1,5 +1,5 @@
-/* MIRA — Profile Quality Community Visualization
-   Точная копия ТЗ: grid 180px 1fr 55px 70px 70px */
+/* dscc bundled */
+!function(e,R){"object"==typeof exports&&"object"==typeof module?module.exports=R():"function"==typeof define&&define.amd?define("dscc",[],R):"object"==typeof exports?exports.dscc=R():e.dscc=R()}(window,function(){return C={},n.m=t={"./src/index.ts":function(e,N,R){"use strict";var i=this&&this.__assign||function(){return(i=Object.assign||function(e){for(var R,t=1,C=arguments.length;t<C;t++)for(var n in R=arguments[t])Object.prototype.hasOwnProperty.call(R,n)&&(e[n]=R[n]);return e}).apply(this,arguments)};Object.defineProperty(N,"__esModule",{value:!0});var a=R("./src/types.ts");!function(e){for(var R in e)N.hasOwnProperty(R)||(N[R]=e[R])}(R("./src/types.ts")),N.getWidth=function(){return document.body.clientWidth},N.getHeight=function(){return document.documentElement.clientHeight},N.getComponentId=function(){var e=new URLSearchParams(window.location.search);if(null!==e.get("dscId"))return e.get("dscId");throw new Error("dscId must be in the query parameters.")};function E(e){return e.type===a.ConfigDataElementType.DIMENSION||e.type===a.ConfigDataElementType.METRIC}function r(e){return e===a.ConfigDataElementType.DIMENSION?-1:1}function _(e){var R=[];e.config.data.forEach(function(e){e.elements.filter(E).forEach(function(e){R.push(e)})});var t,C=(t=function(e,R){return r(e.type)-r(R.type)},R.map(function(e,R){return{item:e,index:R}}).sort(function(e,R){return t(e.item,R.item)||e.index-R.index}).map(function(e){return e.item})),n=[];return C.forEach(function(e){e.value.forEach(function(){return n.push(e.id)})}),n}function o(R){return function(e){var t,C,n={};return C=R,((t=e).length<C.length?t.map(function(e,R){return[e,C[R]]}):C.map(function(e,R){return[t[R],e]})).forEach(function(e){var R=e[0],t=e[1];void 0===n[t]&&(n[t]=[]),n[t].push(R)},{}),n}}N.fieldsByConfigId=function(e){var R=e.fields.reduce(function(e,R){return e[R.id]=R,e},{}),t={};return e.config.data.forEach(function(e){e.elements.filter(E).forEach(function(e){t[e.id]=e.value.map(function(e){return R[e]})})}),t};function U(e){var R={};return(e.config.style||[]).forEach(function(e){e.elements.forEach(function(e){R[e.id]={value:e.value,defaultValue:e.defaultValue}})},{}),R}function Y(e){return e.config.themeStyle}function n(e){switch(e){case a.DSInteractionType.FILTER:return a.InteractionType.FILTER}}function s(e){var R=e.config.interactions;return void 0===R?{}:R.reduce(function(e,R){var t=R.supportedActions.map(n),C={type:n(R.value.type),data:R.value.data};return e[R.id]={value:C,supportedActions:t},e},{})}function u(e){return(e.dataResponse.dateRanges||[]).reduce(function(e,R){return e[R.id]={start:R.start,end:R.end},e},{})}function T(e){var R=e.dataResponse.colorMap||{};return i({},R)}N.tableTransform=function(e){return{tables:(R=e,C=N.fieldsByConfigId(R),n=_(R),E={},r=n.map(function(e){void 0===E[e]?E[e]=0:E[e]++;var R=E[e],t=C[e][R];return i(i({},t),{configId:e})}),(t={})[a.TableType.DEFAULT]={headers:[],rows:[]},o=t,R.dataResponse.tables.forEach(function(e){o[e.id]={headers:r,rows:e.rows}}),o),dateRanges:u(e),fields:N.fieldsByConfigId(e),style:U(e),theme:Y(e),interactions:s(e),colorMap:T(e)};var R,t,C,n,E,r,o},N.objectTransform=function(e){return{tables:(C=_(R=e),(t={})[a.TableType.DEFAULT]=[],n=t,R.dataResponse.tables.forEach(function(e){var R=e.rows.map(o(C));e.id===a.TableType.DEFAULT?n[e.id]=R:(void 0===n[e.id]&&(n[e.id]=[]),n[e.id]=n[e.id].concat(R))}),n),dateRanges:u(e),fields:N.fieldsByConfigId(e),style:U(e),theme:Y(e),interactions:s(e),colorMap:T(e)};var R,t,C,n};function c(e){return e===N.tableTransform||e===N.objectTransform}N.subscribeToData=function(R,t){if(c(t.transform)){var e=function(e){e.data.type===a.MessageType.RENDER?R(t.transform(e.data)):console.error("Unsupported MessageType: "+e.data.type)};window.addEventListener("message",e);var C={componentId:N.getComponentId(),type:a.ToDSMessageType.VIZ_READY};return window.parent.postMessage(C,"*"),function(){return window.removeEventListener("message",e)}}throw new Error("Only built in transform functions are supported.")},"./src/types.ts":function(e,R,t){"use strict";var C,n,E,r,o,N,i;Object.defineProperty(R,"__esModule",{value:!0}),(C=R.ConceptType||(R.ConceptType={})).METRIC="METRIC",C.DIMENSION="DIMENSION",(R.MessageType||(R.MessageType={})).RENDER="RENDER",(R.TableType||(R.TableType={})).DEFAULT="DEFAULT",(r=R.DateRangeType||(R.DateRangeType={})).DEFAULT="DEFAULT",(o=R.ConfigDataElementType||(R.ConfigDataElementType={})).METRIC="METRIC",o.DIMENSION="DIMENSION",o.MAX_RESULTS="MAX_RESULTS",(R.DSInteractionType||(R.DSInteractionType={})).FILTER="FILTER",(i=R.ToDSMessageType||(R.ToDSMessageType={})).VIZ_READY="vizReady",i.INTERACTION="vizAction",(R.InteractionType||(R.InteractionType={})).FILTER="FILTER"}},n.c=C,n.d=function(e,R,t){n.o(e,R)||Object.defineProperty(e,R,{enumerable:!0,get:t})},n.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},n.o=function(e,R){return Object.prototype.hasOwnProperty.call(e,R)},n.p="",n(n.s="./src/index.ts");function n(e){if(C[e])return C[e].exports;var R=C[e]={i:e,l:!1,exports:{}};return t[e].call(R.exports,R,R.exports,n),R.l=!0,R.exports}var t,C});
 
 (function () {
 
@@ -57,7 +57,6 @@
       });
     });
 
-    /* ── CSS точно из ТЗ ── */
     var css = '<style>' +
       '* { box-sizing: border-box; margin: 0; padding: 0; }' +
       'body { font-family: "Courier New", monospace; background: #fff; color: #111; font-size: 13px; }' +
@@ -83,13 +82,11 @@
 
     var html = '<div class="wrap">';
 
-    /* Legend */
     html += '<div class="legend">' +
       '<div class="legend-item"><div class="legend-dot dot-filled"></div>filled</div>' +
       '<div class="legend-item"><div class="legend-dot dot-skipped"></div>skipped</div>' +
       '</div>';
 
-    /* Column headers */
     html += '<div class="quality-row" style="border-bottom: 2px solid #e0e0e0; padding-bottom: 6px;">' +
       '<div class="col-header" style="text-align:left;">Field</div>' +
       '<div class="col-header-bar">Fill rate</div>' +
@@ -98,7 +95,6 @@
       '<div class="col-header">skipped</div>' +
       '</div>';
 
-    /* Rows */
     sections.forEach(function (sec) {
       var label = SECTION_LABELS[sec.key] || sec.key.replace(/_/g, ' ');
 
@@ -107,7 +103,6 @@
         '</div>';
 
       sec.steps.forEach(function (s) {
-        /* Бар: filled занимает fill_pct%, skipped занимает оставшиеся (1-fill_pct)% */
         var bFilled  = (s.fillPct * 100).toFixed(1);
         var bSkipped = ((1 - s.fillPct) * 100).toFixed(1);
 
@@ -117,7 +112,7 @@
             '<div class="bar-filled"  style="width:' + bFilled  + '%"></div>' +
             '<div class="bar-skipped" style="width:' + bSkipped + '%"></div>' +
           '</div>' +
-          '<div class="pct">'       + fmtPct(s.fillPct) + '</div>' +
+          '<div class="pct">'       + fmtPct(s.fillPct)   + '</div>' +
           '<div class="pct-small">' + fmtCount(s.filled)  + '</div>' +
           '<div class="pct-small">' + fmtCount(s.skipped) + '</div>' +
           '</div>';
@@ -136,16 +131,6 @@
     }
   }
 
-  if (typeof dscc !== 'undefined') {
-    init();
-  } else {
-    var s = document.createElement('script');
-    s.src = 'https://ssl.gstatic.com/datastudio/dscc.min.js';
-    s.onload = init;
-    s.onerror = function() {
-      document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;">dscc library failed to load</pre>';
-    };
-    document.head.appendChild(s);
-  }
+  init();
 
 })();

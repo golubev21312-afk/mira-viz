@@ -11,8 +11,8 @@
       "description": "Funnel Drop-off visualization",
       "useNewClient": true,
       "resource": {
-        "js": "gs://looker_mira_bucket/index.js",
-        "config": "gs://looker_mira_bucket/config.json"
+        "js": "https://golubev21312-afk.github.io/mira-viz/index.js",
+        "config": "https://golubev21312-afk.github.io/mira-viz/config.json"
       }
     },
     {
@@ -21,8 +21,8 @@
       "description": "Profile Quality visualization",
       "useNewClient": true,
       "resource": {
-        "js": "gs://looker_mira_bucket/quality/index.js",
-        "config": "gs://looker_mira_bucket/quality/config.json"
+        "js": "https://golubev21312-afk.github.io/mira-viz/quality/index.js",
+        "config": "https://golubev21312-afk.github.io/mira-viz/quality/config.json"
       }
     }
   ]
