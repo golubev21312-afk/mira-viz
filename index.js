@@ -120,10 +120,24 @@
     document.body.innerHTML = css + body;
   }
 
-  try {
-    dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
-  } catch(e) {
-    document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;white-space:pre-wrap">INIT ERR: ' + e.message + '</pre>';
+  function init() {
+    try {
+      dscc.subscribeToData(drawViz, { transform: dscc.objectTransform });
+    } catch(e) {
+      document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;white-space:pre-wrap">INIT ERR: ' + e.message + '</pre>';
+    }
+  }
+
+  if (typeof dscc !== 'undefined') {
+    init();
+  } else {
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/@google/dscc/dist/dscc.min.js';
+    s.onload = init;
+    s.onerror = function() {
+      document.body.innerHTML = '<pre style="padding:10px;font-size:10px;color:red;">dscc library failed to load</pre>';
+    };
+    document.head.appendChild(s);
   }
 
 })();
