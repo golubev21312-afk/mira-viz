@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Funnel Data",
+      "elements": [
+        {
+          "id": "section_order",
+          "label": "Section Order",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "section",
+          "label": "Section",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "step_order",
+          "label": "Step Order",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "step_name",
+          "label": "Step Name",
+          "type": "DIMENSION",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "reach_pct",
+          "label": "Reach %",
+          "type": "METRIC",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "filled_pct",
+          "label": "Filled %",
+          "type": "METRIC",
+          "options": { "min": 1, "max": 1 }
+        },
+        {
+          "id": "skipped_pct",
+          "label": "Skipped %",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        },
+        {
+          "id": "dropped_pct",
+          "label": "Dropped %",
+          "type": "METRIC",
+          "options": { "min": 0, "max": 1 }
+        }
+      ]
+    }
+  ],
+  "style": [],
+  "interactions": [],
+  "capabilities": {}
+}
