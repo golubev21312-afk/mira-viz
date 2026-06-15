@@ -1,17 +1,26 @@
 {
-  "name": "Mira Funnel",
+  "name": "Mira Visualizations",
   "organization": "Mira",
-  "description": "Custom funnel visualization",
+  "description": "Mira onboarding custom visualizations",
   "supportUrl": "https://github.com/golubev21312-afk/mira-viz",
   "devMode": true,
   "components": [
     {
       "id": "miraFunnel",
       "name": "Mira Funnel",
-      "description": "Funnel visualization",
+      "description": "Funnel Drop-off visualization",
       "resource": {
         "js": "gs://looker_mira_bucket/index.js",
         "config": "gs://looker_mira_bucket/config.json"
+      }
+    },
+    {
+      "id": "miraQuality",
+      "name": "Mira Profile Quality",
+      "description": "Profile Quality visualization",
+      "resource": {
+        "js": "gs://looker_mira_bucket/quality/index.js",
+        "config": "gs://looker_mira_bucket/quality/config.json"
       }
     }
   ]
