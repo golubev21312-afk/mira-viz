@@ -89,17 +89,15 @@
       '</div>';
 
     sections.forEach(function (sec) {
-      var label = sec.name.replace(/_/g, ' ');
+      var label = String(sec.name).replace(/_/g, ' ');
       body += '<div class="funnel-row section-header"><div class="funnel-step-name section-label" style="grid-column:1/-1">— ' + label + ' —</div></div>';
 
       sec.steps.forEach(function (s) {
-        var hasSkipped = s.skipped > 0.001;
-
-        var bFilled   = (s.reach * s.filled  * 100).toFixed(1);
-        var bSkipped  = (s.reach * s.skipped * 100).toFixed(1);
-        var bAbandoned = hasSkipped
-          ? (s.reach * s.dropped * 100).toFixed(1)
-          : (s.dropped * 100).toFixed(1);
+        // Bar segments mirror the printed columns exactly — no rescaling,
+        // so the bar never contradicts the numbers next to it.
+        var bFilled    = (s.reach   * 100).toFixed(1);
+        var bSkipped   = (s.skipped * 100).toFixed(1);
+        var bAbandoned = (s.dropped * 100).toFixed(1);
 
         var droppedCls = s.dropped > 0.05 ? 'pct-red' : 'pct-small';
         var droppedStr = s.dropped > 0 ? '-' + Math.round(s.dropped * 100) + '%' : '—';
